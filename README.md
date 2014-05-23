@@ -18,9 +18,9 @@ var app = koa();
 
 var bunyan = require('bunyan');
 // setup you logger instance
-var log = bunyan.createLogger({name: "myapp"});
+var logger = bunyan.createLogger({name: "myapp"});
 
-app.use(koaLogger(log.logger, {
+app.use(koaLogger(logger, {
     // which level you want to use for logging?
     // default is info
     level: 'debug'
