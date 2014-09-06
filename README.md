@@ -23,7 +23,10 @@ var logger = bunyan.createLogger({name: "myapp"});
 app.use(koaLogger(logger, {
     // which level you want to use for logging?
     // default is info
-    level: 'debug'
+    level: 'debug',
+    // this is optional. Here you can provide request time in ms,
+    // and all requests longer than specified time will have level 'warn'
+    timeLimit: 100
 }));
 
 // then start server
