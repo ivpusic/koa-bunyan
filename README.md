@@ -33,16 +33,17 @@ app.use(koaLogger(logger, {
 // let we say... node app.js | ./node_modules/bunyan/bin/bunyan -o short
 
 // result
-18:29:10.520Z  INFO myapp: [RES] GET /auth/restore (204)
-18:29:10.583Z  INFO myapp: [REQ] GET /api/products
-18:29:10.590Z  INFO myapp: [REQ] GET /api/categories
-18:29:10.620Z  INFO myapp: [RES] GET /api/categories (200)
-18:29:10.620Z  INFO myapp: [RES] GET /api/products (200)
-18:29:10.689Z  INFO myapp: [REQ] GET /api/categories/535c4375bcbcc794660b6c1d
-18:29:10.694Z  INFO myapp: [RES] GET /api/categories/535c4375bcbcc794660b6c1d (200)
-18:29:10.771Z  INFO myapp: [REQ] GET /api/categories/535c437abcbcc794660b6c1e
-18:29:10.774Z  INFO myapp: [RES] GET /api/categories/535c437abcbcc794660b6c1e (200)
-18:29:10.902Z  INFO myapp: [REQ] GET /api/users/1
+22:36:34.043Z  WARN myapp: [RES] GET /api/products?top=5 (200) took 610 ms
+22:36:34.172Z  INFO myapp: [REQ] GET /api/categories/535c4375bcbcc794660b6c1d
+22:36:34.184Z  INFO myapp: [RES] GET /api/categories/535c4375bcbcc794660b6c1d (200) took 12 ms
+22:36:34.375Z  INFO myapp: [REQ] GET /Screenshot%20from%202014-03-15%2011:17:20.png
+22:36:34.378Z  INFO myapp: [REQ] GET /51a2035604cea64219.jpg
+22:36:34.381Z  INFO myapp: [REQ] GET /matrix.jpg
+22:36:34.394Z  INFO myapp: [REQ] GET /fonts/fontawesome-webfont.woff?v=4.1.0
+22:36:34.400Z  INFO myapp: [RES] GET /Screenshot%20from%202014-03-15%2011:17:20.png (200) took 26 ms
+22:36:34.406Z  INFO myapp: [RES] GET /fonts/fontawesome-webfont.woff?v=4.1.0 (200) took 12 ms
+22:36:34.415Z  INFO myapp: [RES] GET /51a2035604cea64219.jpg (200) took 38 ms
+22:36:34.417Z  INFO myapp: [RES] GET /matrix.jpg (200) took 36 ms
 ```
 
 Logs also can go to somewhere else. It depends on you passed logger configuration. 
