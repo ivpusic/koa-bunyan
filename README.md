@@ -49,5 +49,9 @@ app.use(koaLogger(logger, {
 Logs also can go to somewhere else. It depends on you passed logger configuration. 
 For more details how to configure bunyan look at [node-bunyan](https://github.com/trentm/node-bunyan)
 
+## Note
+
+Version >= 1.0.0 supports koa2, version < 1.0.0 supports koa1
+
 # License
 **MIT**
