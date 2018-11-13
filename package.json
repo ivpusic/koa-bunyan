@@ -1,6 +1,6 @@
 {
   "name": "koa-bunyan",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Using node-bunyan as koa logging middleware",
   "main": "index.js",
   "scripts": {
