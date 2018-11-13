@@ -30,7 +30,9 @@ app.use(koaLogger(logger, {
     headers: ['Accept']
     // optional - provide a list of request headers you'd like to log
 }));
+```
 
+```bash
 // then start server
 // let we say... node app.js | ./node_modules/bunyan/bin/bunyan -o short
 
