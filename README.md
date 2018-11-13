@@ -26,7 +26,9 @@ app.use(koaLogger(logger, {
     level: 'debug',
     // this is optional. Here you can provide request time in ms,
     // and all requests longer than specified time will have level 'warn'
-    timeLimit: 100
+    timeLimit: 100,
+    headers: ['Accept']
+    // optional - provide a list of request headers you'd like to log
 }));
 
 // then start server
@@ -34,7 +36,7 @@ app.use(koaLogger(logger, {
 
 // result
 22:36:34.043Z  WARN myapp: [RES] GET /api/products?top=5 (200) took 610 ms
-22:36:34.172Z  INFO myapp: [REQ] GET /api/categories/535c4375bcbcc794660b6c1d
+22:36:34.172Z  INFO myapp: [REQ] GET /api/categories/535c4375bcbcc794660b6c1d headers {"Accept": "*/*"}
 22:36:34.184Z  INFO myapp: [RES] GET /api/categories/535c4375bcbcc794660b6c1d (200) took 12 ms
 22:36:34.375Z  INFO myapp: [REQ] GET /Screenshot%20from%202014-03-15%2011:17:20.png
 22:36:34.378Z  INFO myapp: [REQ] GET /51a2035604cea64219.jpg
